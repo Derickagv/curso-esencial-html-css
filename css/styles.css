@@ -35,7 +35,8 @@
 
 body{
   color: var(--gray30);
-  font-family: 'Charter';
+  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Charter'; */
 }
 
 a{
@@ -73,3 +74,35 @@ h2{
 h3{
   font-size: 1.5em;
 }
+
+pre{
+  background: #FEC62E;
+}
+
+.hero{
+  height: 350px;
+  background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url(../images/patron.png);
+  /* background-position: left top; */
+  /* background-position: left 50px bottom -10px; */
+}
+
+.section-content h3{
+  counter-increment: titleList;
+}
+
+.section-content h3::before {
+  content: counter(titleList, decimal);
+}
+
+.section-content h3::after{
+  content: "";
+  width: 32px;
+  height: 4px;
+  background: var(--gray30);
+  display: block;
+}
+
+
+/* ::selection{
+  background: red;
+} */
