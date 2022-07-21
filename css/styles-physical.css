@@ -33,6 +33,10 @@
   --gray10: #616161;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   color: var(--gray30);
   font-family: 'Roboto', sans-serif;
@@ -47,7 +51,16 @@ a{
 header{
   /* --grey10: red; */
   font-size: 14px;
+  width: 188px;
   color: var(--gray10);
+  position: absolute;
+  left: -232px;
+  top: 64px;
+  z-index: 1;
+  /* position: relative; */
+  /* position: absolute; */
+  /* position: fixed; Te persigue como un btn flotante */
+  /* position: sticky; Se queda estatico, usado en el navbar */
 }
 
 header a{
@@ -59,12 +72,18 @@ header a:hover{
   color: var(--gray30);
 }
 
+header li{
+  margin-bottom: 16px;
+}
+
 nav details summary{
   font-weight: bold;
+  line-height: 24px;
 }
 
 h1{
   font-size: 60px;
+  font-weight: normal;
   /* font-size: 3.75em; */
   margin-top: 64px;
   margin-bottom: 16px;
@@ -89,6 +108,10 @@ h3{
   margin-top: 16px;
   margin-bottom: 24px;
   font-weight: normal;
+  position: relative;
+  /* position: sticky; */
+  top: 0;
+  background: white;
 }
 
 pre{
@@ -114,6 +137,15 @@ blockquote span::before{
   content: "-";
 }
 
+.header{
+  position: sticky;
+  top: 0;
+}
+
+.header-content{
+  position: relative;
+}
+
 main{
   background: white;
 }
@@ -125,7 +157,6 @@ main{
 
 .main-content{
   background: white;
-  padding: 20px;
 }
 
 .debug{
@@ -165,7 +196,7 @@ main{
 
 .section-content h3{
   counter-increment: titleList;
-  padding-bottom: 4px;
+  padding-bottom: 8px;
 }
 
 .section-content h3::before {
@@ -174,10 +205,13 @@ main{
 
 .section-content h3::after{
   content: "";
-  width: 32px;
+  width: 80px;
   height: 4px;
   background: var(--gray30);
-  display: block;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 
