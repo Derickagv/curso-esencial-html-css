@@ -28,62 +28,99 @@
 
 :root{
   font-size: 18px;
-  --gray30: #212121;
-  --gray20: #212429;
-  --gray10: #616161;
+  --white30: white;
+  --white20: #A5A3A5;
+  --white10: #3A3539;
 }
 
 body{
-  color: var(--gray30);
-  font-family: 'Roboto', sans-serif;
+  color: var(--white30);
+  font-family: 'Nunito', sans-serif;
+  background: #251F24;
+  margin: 0;
+  /* margin-inline: 100px; */
+  /* margin-block: 50px; */
+  /* margin-block-start: 50px; */
+  /* margin-block-end: 50px; */
   /* font-family: 'Charter'; */
 }
 
 a{
-  color: var(--gray30);
+  color: var(--white30);
 }
 
 header{
   /* --grey10: red; */
   font-size: 14px;
-  color: var(--gray10);
+  color: var(--white);
+}
+
+header li{
+  color: var(--white20);
 }
 
 header a{
-  color: var(--gray10);
+  color: var(--white20);
   text-decoration: none;
 }
 
 header a:hover{
-  color: var(--gray30);
+  color: var(--white30);
 }
 
 nav details summary{
   font-weight: bold;
 }
 
+/* h1, h2, h3{
+  font-weight: normal;
+} */
+
 h1{
   font-size: 60px;
+  margin-block-start: 64px;
+  margin-block-end: 16px;
   /* font-size: 3.75em; */
 }
 
 h2{
   font-size: 2em;
+  margin-block: 40px;
 }
 
 h3{
   font-size: 1.5em;
+  font-weight: 600;
+  margin-block: 16px;
 }
 
+hr{
+  margin-block: 40px;
+  border-color: rgba(97, 97, 97, 0.2);
+}
 pre{
-  background: #FEC62E;
+  background: var(--white10);
+}
+
+p{
+  color: var(--white20);
 }
 
 .hero{
   height: 350px;
-  background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url(../images/patron.png);
+  background: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
+  /* background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url(../images/patron.png); */
   /* background-position: left top; */
   /* background-position: left 50px bottom -10px; */
+}
+
+.section-content img{
+  margin-block-start: 40px;
+  display: block;
+}
+
+.section-content {
+  counter-reset: titleList;
 }
 
 .section-content h3{
@@ -91,17 +128,28 @@ pre{
 }
 
 .section-content h3::before {
-  content: counter(titleList, decimal);
+  content: counter(titleList, decimal) ". ";
 }
 
 .section-content h3::after{
   content: "";
   width: 32px;
   height: 4px;
-  background: var(--gray30);
+  background: var(--white30);
   display: block;
 }
 
+blockquote{
+  margin-block-start: 80px;
+  margin-block-end: 63px;
+  background: var(--white10);
+  border-radius: 8px;
+
+}
+
+.main hr{
+  display: none;
+}
 
 /* ::selection{
   background: red;
