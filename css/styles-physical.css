@@ -114,6 +114,24 @@ blockquote span::before{
   content: "-";
 }
 
+main{
+  background: white;
+}
+
+.wrapper{
+  width: 902px;
+  margin: auto;
+}
+
+.main-content{
+  background: white;
+  padding: 20px;
+}
+
+.debug{
+  outline: 1px solid red;
+}
+
 .hero{
   height: 350px;
   background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url(../images/patron.png);
